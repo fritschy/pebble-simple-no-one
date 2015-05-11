@@ -1,0 +1,30 @@
+{
+  "uuid": "3003a1ed-14a8-4dc9-8f86-d1d559bf97af",
+  "shortName": "simple-no-one",
+  "longName": "simple-no-one",
+  "companyName": "MakeAwesomeHappen",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["basalt"],
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": [
+       {
+          "type": "png",
+          "name": "NUMBERS_INDIGO",
+          "file": "bitmap-font-1-indigo.png"
+       },
+       {
+          "type": "png",
+          "name": "NUMBERS_BLACK",
+          "file": "bitmap-font-1-black.png"
+       }
+    ]
+  }
+}
