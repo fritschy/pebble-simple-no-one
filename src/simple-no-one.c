@@ -20,7 +20,7 @@
 
 #include <pebble.h>
 
-#if 0
+#if 1
 #undef APP_LOG
 #define APP_LOG(...)
 #define START_TIME_MEASURE()
@@ -75,7 +75,7 @@ static void update_effect_layer(Layer *l, GContext *ctx) {
    // Need to draw the ticks _long_ else they look rather fscking ugly.
    graphics_context_set_stroke_color(ctx, theme.tick);
    graphics_context_set_stroke_width(ctx, 1);
-   for (int i = 1; i <= 1+min; i++) {
+   for (int i = 1; i <= min; i++) {
       int32_t angle = TRIG_MAX_ANGLE * i / 60;
       int32_t sin = sin_lookup(angle);
       int32_t cos = cos_lookup(angle);
