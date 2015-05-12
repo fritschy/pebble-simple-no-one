@@ -46,9 +46,10 @@ static void update_effect_layer(Layer *l, GContext *ctx) {
    const int radius_out = 144 / 2 - 10;
    const int radius_in = 144 / 2 - 15;
 
-   // Need to draw the ticks _long_ else they look rather fscking ugly.
    graphics_context_set_stroke_color(ctx, theme.tick);
    graphics_context_set_stroke_width(ctx, 1);
+   // min = min ? min : 60; // use this if you want a full circle on the full hour
+                            // this however is confusing as fsck!
    for (int i = 1; i <= min; i++) {
       int32_t angle = TRIG_MAX_ANGLE * i / 60;
       int32_t sin = sin_lookup(angle);
@@ -59,6 +60,7 @@ static void update_effect_layer(Layer *l, GContext *ctx) {
          -cos * radius_out / TRIG_MAX_RATIO + center.y,
       };
 
+      // Need to draw the ticks _long_ else they look rather fscking ugly.
       graphics_draw_line(ctx, center, p1);
    }
 
