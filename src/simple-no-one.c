@@ -90,13 +90,13 @@ static void init(void) {
    // hinting: some
    // antialiasing: off
 
-   // Indigo background theme
-   theme = (ThemeInfo) {
-        .tick = GColorRajah,
-        .background = GColorIndigo,
-        .text = GColorWhite
-   };
-   fontbitmap = gbitmap_create_with_resource(RESOURCE_ID_NUMBERS_INDIGO);
+   /* // Indigo background theme */
+   /* theme = (ThemeInfo) { */
+   /*      .tick = GColorRajah, */
+   /*      .background = GColorIndigo, */
+   /*      .text = GColorWhite */
+   /* }; */
+   /* fontbitmap = gbitmap_create_with_resource(RESOURCE_ID_NUMBERS_INDIGO); */
 
    // black background theme
    theme = (ThemeInfo) {
