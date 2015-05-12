@@ -63,8 +63,13 @@ static void update_effect_layer(Layer *l, GContext *ctx) {
       // Need to draw the ticks _long_ else they look rather fscking ugly.
       graphics_draw_line(ctx, center, p1);
    }
-
    graphics_fill_circle(ctx, center, radius_in);
+
+   // ahem...
+   if (!clock_is_24h_style()) {
+      hr = hr % 12;
+      hr = !hr ? 12 : hr;
+   }
 
    graphics_draw_bitmap_in_rect(ctx, numbers[hr / 10], GRect(144 / 2 - 24, 168 / 2 - 20, 24, 40));
    graphics_draw_bitmap_in_rect(ctx, numbers[hr % 10], GRect(144 / 2, 168 / 2 - 20, 24, 40));
