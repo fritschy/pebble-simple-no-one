@@ -21,7 +21,6 @@
 #include <pebble.h>
 
 static Window *window;
-static Layer *effect_layer;
 static GRect bounds;
 static GPoint center;
 static GBitmap *fontbitmap;
@@ -73,17 +72,14 @@ static void window_load(Window *window) {
    Layer *window_layer = window_get_root_layer(window);
    bounds = layer_get_bounds(window_layer);
    center = grect_center_point(&bounds);
-   effect_layer = layer_create(bounds);
-   layer_set_update_proc(effect_layer, update_effect_layer);
-   layer_add_child(window_layer, effect_layer);
+   layer_set_update_proc(window_layer, update_effect_layer);
 }
 
 static void window_unload(Window *window) {
-   layer_destroy(effect_layer);
 }
 
 static void handle_tick(struct tm *tick_time, TimeUnits units_changed) {
-   layer_mark_dirty(effect_layer);
+   layer_mark_dirty(window_get_root_layer(window));
 }
 
 static void init(void) {
