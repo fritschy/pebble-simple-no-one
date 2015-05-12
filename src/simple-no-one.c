@@ -43,8 +43,8 @@ static void update_effect_layer(Layer *l, GContext *ctx) {
    graphics_context_set_fill_color(ctx, theme.background);
    graphics_fill_rect(ctx, bounds, 0, 0);
 
-   const int radius_out = 144 / 2 - 10;
-   const int radius_in = 144 / 2 - 15;
+   const int radius_out = 144 / 2 - 1;
+   const int radius_in = 144 / 2 - 8;
 
    graphics_context_set_stroke_color(ctx, theme.tick);
    graphics_context_set_stroke_width(ctx, 1);
