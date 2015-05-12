@@ -17,11 +17,6 @@
     "media": [
        {
           "type": "png",
-          "name": "NUMBERS_INDIGO",
-          "file": "bitmap-font-1-indigo.png"
-       },
-       {
-          "type": "png",
           "name": "NUMBERS_BLACK",
           "file": "bitmap-font-1-black.png"
        }
